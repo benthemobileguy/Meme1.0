@@ -1,6 +1,6 @@
 //
 //  Created by Ben on 2023/06/23.
-//  Copyright © 2023 Deborah. All rights reserved.
+//  Copyright © 2023 Ben. All rights reserved.
 //
 
 import UIKit
@@ -67,7 +67,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         subscribeToKeyboardNotifications()
         
-        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        // Disable camera button on the simulator
+        #if targetEnvironment(simulator)
+            cameraButton.isEnabled = false
+        #else
+            cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        #endif
     }
     
     override func viewWillDisappear(_ animated: Bool) {

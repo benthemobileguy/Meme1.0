@@ -3,7 +3,7 @@
 //  MeMe
 //
 //  Created by Ben on 2023/06/23.
-//  Copyright © 2023 Deborah. All rights reserved.
+//  Copyright © 2023 Ben. All rights reserved.
 //
 
 import UIKit
